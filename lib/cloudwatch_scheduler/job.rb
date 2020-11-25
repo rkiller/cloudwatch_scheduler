@@ -1,5 +1,5 @@
 module CloudwatchScheduler
-  class Job < ::ApplicationJob
+  class Job < ActiveJob::Base
     queue_as :cloudwatch_scheduler
 
     def initialize(config: CloudwatchScheduler.global)
